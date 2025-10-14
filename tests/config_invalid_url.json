@@ -1,0 +1,9 @@
+{
+  "package": "demo_pkg",
+  "repo_url": "htp://not_a_valid_url",
+  "file_path": "",
+  "test_mode": false,
+  "version": "1.0.0",
+  "ascii": false,
+  "max_depth": 3
+}

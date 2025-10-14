@@ -1,0 +1,9 @@
+{
+  "package": "",
+  "repo_url": "https://github.com/example/demo.git",
+  "file_path": "",
+  "test_mode": false,
+  "version": "1.0.0",
+  "ascii": false,
+  "max_depth": 3
+}

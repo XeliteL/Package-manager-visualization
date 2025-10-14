@@ -1,0 +1,9 @@
+{
+  "package": "demo_pkg",
+  "repo_url": "",
+  "file_path": "tests/testfile.txt",
+  "test_mode": true,
+  "version": "1.0.0",
+  "ascii": false,
+  "max_depth": 2
+}

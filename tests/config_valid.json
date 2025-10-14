@@ -1,0 +1,9 @@
+{
+  "package": "demo_pkg",
+  "repo_url": "https://example.com/example/example.git",
+  "file_path": "",
+  "test_mode": false,
+  "version": "1.0.0",
+  "ascii": true,
+  "max_depth": 3
+}
