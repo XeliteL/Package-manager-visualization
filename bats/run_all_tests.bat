@@ -11,4 +11,3 @@ call bats\test6_test_mode_invalid.bat
 call bats\test7_negative_depth.bat
 
 echo === Все тесты завершены ===
-pause
