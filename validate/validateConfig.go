@@ -14,7 +14,7 @@ func ValidateConfig(cfg *config_load.Config) error {
 	// Проверка имени пакета
 	cfg.Package = strings.TrimSpace(cfg.Package)
 	if cfg.Package == "" {
-		return errors.New("параметр пакет не может быть пустым")
+		return errors.New("параметр 'package' не может быть пустым")
 	}
 
 	// Проверка корректности URL в случае его наличия
@@ -26,12 +26,7 @@ func ValidateConfig(cfg *config_load.Config) error {
 
 	// Проверка наличия файла в случае указания пути до него
 	if cfg.FilePath != "" {
-		fp := cfg.FilePath
-		if strings.HasPrefix(fp, "~") {
-			home, _ := os.UserHomeDir()
-			fp = strings.Replace(fp, "~", home, 1)
-		}
-		abs, err := filepath.Abs(fp)
+		abs, err := filepath.Abs(cfg.FilePath)
 		if err != nil {
 			return fmt.Errorf("невозможно обработать путь '%s': %w", cfg.FilePath, err)
 		}
@@ -40,7 +35,7 @@ func ValidateConfig(cfg *config_load.Config) error {
 			return fmt.Errorf("файл '%s' не найден или недоступен: %w", abs, err)
 		}
 		if info.IsDir() {
-			return fmt.Errorf("'%s' - это каталог, ожидался файл", abs)
+			return fmt.Errorf("'%s' — это каталог, ожидался файл", abs)
 		}
 		cfg.FilePath = abs
 	}
@@ -52,7 +47,7 @@ func ValidateConfig(cfg *config_load.Config) error {
 
 	// Проверяем глубину анализа
 	if cfg.MaxDepth < -1 {
-		return errors.New("параметр 'max_depth' должен быть равен -1 - без ограничений, либо >= 0")
+		return errors.New("параметр 'max_depth' должен быть равен -1 (без ограничений), либо >= 0")
 	}
 
 	return nil

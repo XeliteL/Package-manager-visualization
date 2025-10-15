@@ -1,0 +1,8 @@
+{
+  "package": "demo_pkg",
+  "file_path": "tests/stage2/deps_test.txt",
+  "test_mode": true,
+  "version": "1.0.0",
+  "ascii": false,
+  "max_depth": 2
+}

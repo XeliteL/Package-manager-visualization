@@ -1,0 +1,9 @@
+{
+  "package": "example_pkg",
+  "repo_url": "https://github.com/example/example.git",
+  "file_path": "",
+  "test_mode": false,
+  "version": "1.0.0",
+  "ascii": false,
+  "max_depth": 3
+}

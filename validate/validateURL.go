@@ -16,5 +16,9 @@ func ValidateURL(s string) error {
 		return fmt.Errorf("URL должен содержать схему и хост (пример: https://example.com)")
 	}
 
+	if u.Scheme != "http" && u.Scheme != "https" {
+    	return fmt.Errorf("недопустимая схема URL: %s", u.Scheme)
+	}
+
 	return nil
 }

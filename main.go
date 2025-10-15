@@ -4,7 +4,9 @@ import (
 	"flag"
 	"fmt"
 	"pmv/config_load"
+	"pmv/dependencies"
 	"pmv/errors"
+	"pmv/outputs"
 	"pmv/validate"
 )
 
@@ -22,9 +24,7 @@ func main() {
 	flag.Parse()
 
 	// Создаём базовую конфигурацию со значениями по умолчанию
-	cfg := config_load.Config{
-		MaxDepth: -1,
-	}
+	cfg := config_load.Config{MaxDepth: -1}
 
 	// Если указан JSON-файл — читаем из него
 	if *cfgPath != "" {
@@ -61,6 +61,27 @@ func main() {
 		errors.ExitWithError(err)
 	}
 
-	// Выводим итоговую конфигурацию в формате key=value
-	config_load.PrintConfig(&cfg)
+	fmt.Println("Итоговая конфигурация:")
+	outputs.PrintConfig(&cfg)
+	fmt.Println()
+
+	fmt.Println("Анализ зависимостей:")
+	deps, err := dependencies.CollectDependencies(&cfg)
+	if err != nil {
+		errors.ExitWithError(fmt.Errorf("ошибка при сборе зависимостей: %w", err))
+	}
+
+	if len(deps) == 0 {
+		fmt.Println("Зависимости отсутствуют")
+		return
+	}
+
+	if cfg.ASCII {
+		outputs.PrintASCII(deps)
+	} else {
+		fmt.Println("Список прямых зависимостей:")
+		for _, d := range deps {
+			fmt.Println(" -", d)
+		}
+	}
 }

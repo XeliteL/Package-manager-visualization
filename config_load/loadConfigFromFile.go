@@ -12,9 +12,5 @@ func LoadConfigFromFile(path string, cfg *Config) error {
 		return err
 	}
 
-	if err := json.Unmarshal(data, cfg); err != nil {
-		return err
-	}
-
-	return nil
+	return json.Unmarshal(data, cfg)
 }
