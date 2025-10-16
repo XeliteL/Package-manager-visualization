@@ -5,7 +5,7 @@ import (
 	"pmv/config_load"
 )
 
-// Вывод конфигурации (ключ = значение)
+// Вывод конфигурации
 func PrintConfig(cfg *config_load.Config) {
 	fmt.Printf("package=%s\n", cfg.Package)
 	fmt.Printf("repo_url=%s\n", cfg.RepoURL)

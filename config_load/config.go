@@ -1,5 +1,6 @@
 package config_load
 
+// Конфигурация программы
 type Config struct {
 	Package  string `json:"package"`   // Имя пакета
 	RepoURL  string `json:"repo_url"`  // URL пакета

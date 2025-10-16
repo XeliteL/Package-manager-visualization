@@ -1,0 +1,7 @@
+{
+  "package": "demo_pkg",
+  "file_path": "tests/stage3/deps_tree.txt",
+  "test_mode": true,
+  "ascii": true,
+  "max_depth": 1
+}

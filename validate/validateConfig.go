@@ -20,7 +20,7 @@ func ValidateConfig(cfg *config_load.Config) error {
 	// Проверка корректности URL в случае его наличия
 	if cfg.RepoURL != "" {
 		if err := ValidateURL(cfg.RepoURL); err != nil {
-			return fmt.Errorf("некорректный URL репозитория: %w", err)
+			return fmt.Errorf("некорректный URL: %w", err)
 		}
 	}
 
