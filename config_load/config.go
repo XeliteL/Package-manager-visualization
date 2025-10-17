@@ -9,5 +9,5 @@ type Config struct {
 	Version  string `json:"version"`   // Версия пакета
 	ASCII    bool   `json:"ascii"`     // Вывод зависимостей в формате ASCII-дерева.
 	MaxDepth int    `json:"max_depth"` // Максимальная глубина анализа зависимостей
-	Mode     string `json:"mode"`      // "tree" или "order"
+	Mode     string `json:"mode"`      // "tree", "order" или "dot"
 }

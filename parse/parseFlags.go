@@ -15,7 +15,7 @@ func ParseFlags() config_load.Config {
 	flag.BoolVar(&cfg.TestMode, "test", false, "Режим тестирования")
 	flag.BoolVar(&cfg.ASCII, "ascii", true, "Вывод в ASCII-дереве")
 	flag.IntVar(&cfg.MaxDepth, "max-depth", -1, "Глубина анализа (-1 = без ограничений)")
-	flag.StringVar(&cfg.Mode, "mode", "tree", "Режим работы: tree или order")
+	flag.StringVar(&cfg.Mode, "mode", "tree", "Режим работы: tree, order или dot")
 	flag.Parse()
 
 	if *configFile != "" {

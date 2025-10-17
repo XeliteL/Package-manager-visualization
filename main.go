@@ -8,6 +8,7 @@ import (
 	"pmv/outputs"
 	"pmv/parse"
 	"pmv/validate"
+	"pmv/dots"
 	"strings"
 )
 
@@ -37,6 +38,15 @@ func main() {
 		for i, name := range order {
 			fmt.Printf("%2d. %s\n", i+1, name)
 		}
+
+	case "dot":
+		filename := "graph.dot"
+		if err := dots.ExportToDOT(root, filename); err != nil {
+			errors.ExitWithError(err)
+		}
+		fmt.Println("Файл визуализации сохранён как:", filename)
+		fmt.Println("Можно построить изображение: dot -Tpng graph.dot -o graph.png")
+
 	default:
 		fmt.Println("Дерево зависимостей (ASCII):")
 		outputs.PrintTree(root, "", true)

@@ -2,6 +2,7 @@ package load
 
 import "pmv/dependencies"
 
+// Порядок загрузки
 func GetLoadOrder(root *dependencies.DepNode) []string {
     var order []string
     visited := make(map[string]bool)
