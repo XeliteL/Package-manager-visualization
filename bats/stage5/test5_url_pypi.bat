@@ -19,10 +19,17 @@ echo Получение зависимостей с https://pypi.org/pypi/matplo
 
 if exist graph.dot (
     echo Файл graph.dot успешно создан.
-    echo Можно визуализировать граф командой:
-    echo dot -Tpng graph.dot -o graph.png
 ) else (
     echo Ошибка: файл graph.dot не создан.
+)
+
+echo Визуализация с помощью -Tpng graph.dot -o graph.png
+dot -Tpng graph.dot -o graph.png
+
+if exist graph.png (
+    echo Файл graph.png успешно создан.
+) else (
+    echo Ошибка: файл graph.png не создан.
 )
 
 echo -----------------------------------------------
