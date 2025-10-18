@@ -21,7 +21,7 @@ func main() {
 	fmt.Println("Режим:", cfg.Mode)
 	fmt.Println()
 
-	// Сбор зависимостей (из файла или эмуляция)
+	// Сбор зависимостей
 	deps, err := dependencies.CollectDependencies(&cfg)
 	if err != nil {
 		errors.ExitWithError(fmt.Errorf("ошибка при сборе зависимостей: %w", err))
