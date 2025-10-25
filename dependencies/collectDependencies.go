@@ -42,6 +42,6 @@ func CollectDependencies(cfg *config_load.Config) ([]string, error) {
 		return data.Info.RequiresDist, nil
 	}
 
-	fmt.Printf("Получение зависимостей пакета '%s' из %s...\n", cfg.Package, cfg.RepoURL)
+	fmt.Printf("Эмуляция: ")
 	return []string{"requests", "numpy", "pandas", "flask"}, nil
 }
