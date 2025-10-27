@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 > nul
-echo === Тест 5: Реальный пакет из PyPI (matplotlib) ===
+echo === Тест 5: Пакет из PyPI ===
 setlocal
 
 REM Путь к исполняемому файлу (если программа уже собрана)
@@ -15,7 +15,7 @@ if not exist %EXE% (
 
 echo Режим: dot
 echo Получение зависимостей с https://pypi.org/pypi/matplotlib/json ...
-%RUN_CMD% -package matplotlib -repo https://pypi.org/pypi/matplotlib/json -mode dot
+%RUN_CMD% -package SciPy  -repo https://pypi.org/pypi/SciPy/json -mode dot
 
 if exist graph.dot (
     echo Файл graph.dot успешно создан.

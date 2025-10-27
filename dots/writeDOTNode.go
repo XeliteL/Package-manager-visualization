@@ -8,8 +8,10 @@ import (
 
 // Рекурсивная запись узлов в DOT
 func WriteDOTNode(f *os.File, node *dependencies.DepNode) {
-	for _, child := range node.Children {
-		fmt.Fprintf(f, "    \"%s\" -> \"%s\";\n", node.Name, child.Name)
-		WriteDOTNode(f, child)
+	parent := SanitizeName(node.Name)
+	for _, dep := range node.Children {
+		child := SanitizeName(dep.Name)
+		fmt.Fprintf(f, "\"%s\" -> \"%s\";\n", parent, child)
+		WriteDOTNode(f, dep)
 	}
 }
