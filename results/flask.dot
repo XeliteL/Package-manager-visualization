@@ -1,0 +1,11 @@
+digraph Dependencies {
+"flask" -> "blinker_1.9.0";
+"flask" -> "click_8.1.3";
+"flask" -> "importlib-metadata_3.6.0; python_version  3.10";
+"flask" -> "itsdangerous_2.2.0";
+"flask" -> "jinja2_3.1.2";
+"flask" -> "markupsafe_2.1.1";
+"flask" -> "werkzeug_3.1.0";
+"flask" -> "asgiref_3.2; extra __ async";
+"flask" -> "python-dotenv; extra __ dotenv";
+}

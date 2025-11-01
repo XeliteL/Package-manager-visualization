@@ -1,0 +1,30 @@
+digraph Dependencies {
+"fastapi" -> "starlette0.50.0_0.40.0";
+"fastapi" -> "pydantic!_1.8!_1.8.1!_2.0.0!_2.0.1!_2.1.03.0.0_1.7.4";
+"fastapi" -> "typing-extensions_4.8.0";
+"fastapi" -> "annotated-doc_0.0.2";
+"fastapi" -> "fastapi-cli[standard]_0.0.8; extra __ standard";
+"fastapi" -> "httpx1.0.0_0.23.0; extra __ standard";
+"fastapi" -> "jinja2_3.1.5; extra __ standard";
+"fastapi" -> "python-multipart_0.0.18; extra __ standard";
+"fastapi" -> "email-validator_2.0.0; extra __ standard";
+"fastapi" -> "uvicorn[standard]_0.12.0; extra __ standard";
+"fastapi" -> "fastapi-cli[standard-no-fastapi-cloud-cli]_0.0.8; extra __ standard-no-fastapi-cloud-cli";
+"fastapi" -> "httpx1.0.0_0.23.0; extra __ standard-no-fastapi-cloud-cli";
+"fastapi" -> "jinja2_3.1.5; extra __ standard-no-fastapi-cloud-cli";
+"fastapi" -> "python-multipart_0.0.18; extra __ standard-no-fastapi-cloud-cli";
+"fastapi" -> "email-validator_2.0.0; extra __ standard-no-fastapi-cloud-cli";
+"fastapi" -> "uvicorn[standard]_0.12.0; extra __ standard-no-fastapi-cloud-cli";
+"fastapi" -> "fastapi-cli[standard]_0.0.8; extra __ all";
+"fastapi" -> "httpx1.0.0_0.23.0; extra __ all";
+"fastapi" -> "jinja2_3.1.5; extra __ all";
+"fastapi" -> "python-multipart_0.0.18; extra __ all";
+"fastapi" -> "itsdangerous_1.1.0; extra __ all";
+"fastapi" -> "pyyaml_5.3.1; extra __ all";
+"fastapi" -> "ujson!_4.0.2!_4.1.0!_4.2.0!_4.3.0!_5.0.0!_5.1.0_4.0.1; extra __ all";
+"fastapi" -> "orjson_3.2.1; extra __ all";
+"fastapi" -> "email-validator_2.0.0; extra __ all";
+"fastapi" -> "uvicorn[standard]_0.12.0; extra __ all";
+"fastapi" -> "pydantic-settings_2.0.0; extra __ all";
+"fastapi" -> "pydantic-extra-types_2.0.0; extra __ all";
+}

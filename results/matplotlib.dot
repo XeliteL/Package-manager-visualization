@@ -1,0 +1,17 @@
+digraph Dependencies {
+"matplotlib" -> "contourpy_1.0.1";
+"matplotlib" -> "cycler_0.10";
+"matplotlib" -> "fonttools_4.22.0";
+"matplotlib" -> "kiwisolver_1.3.1";
+"matplotlib" -> "numpy_1.23";
+"numpy_1.23" -> "mkl_2024.0";
+"numpy_1.23" -> "setuptools";
+"matplotlib" -> "packaging_20.0";
+"matplotlib" -> "pillow_8";
+"matplotlib" -> "pyparsing_3";
+"matplotlib" -> "python-dateutil_2.7";
+"matplotlib" -> "meson-python0.17.0_0.13.1; extra __ dev";
+"matplotlib" -> "pybind11!_2.13.3_2.13.2; extra __ dev";
+"matplotlib" -> "setuptools_scm_7; extra __ dev";
+"matplotlib" -> "setuptools_64; extra __ dev";
+}

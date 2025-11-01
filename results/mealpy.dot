@@ -1,0 +1,14 @@
+digraph Dependencies {
+"mealpy" -> "numpy_1.26.0_1.17.1";
+"numpy_1.26.0_1.17.1" -> "mkl_2024.0";
+"numpy_1.26.0_1.17.1" -> "setuptools";
+"mealpy" -> "scipy_1.7.1";
+"mealpy" -> "pandas_1.2.0";
+"pandas_1.2.0" -> "numpy_1.25.0";
+"mealpy" -> "matplotlib_3.1.3";
+"mealpy" -> "opfunu_1.0.0";
+"mealpy" -> "pytest_7.0; extra __ dev";
+"mealpy" -> "twine_4.0.1; extra __ dev";
+"mealpy" -> "pytest-cov__4.0.0; extra __ dev";
+"mealpy" -> "flake8_4.0.1; extra __ dev";
+}

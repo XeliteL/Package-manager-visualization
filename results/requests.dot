@@ -1,0 +1,8 @@
+digraph Dependencies {
+"requests" -> "charset_normalizer4_2";
+"requests" -> "idna4_2.5";
+"requests" -> "urllib33_1.21.1";
+"requests" -> "certifi_2017.4.17";
+"requests" -> "PySocks!_1.5.7_1.5.6; extra __ socks";
+"requests" -> "chardet6_3.0.2; extra __ use-chardet-on-py3";
+}
